@@ -18,6 +18,14 @@
 		vertical-align: baseline;
 	}
 
+	img {
+		width: 100%;
+	}
+
+	iframe {
+		width: 100%;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -1622,6 +1630,7 @@
 	h2 {
 		font-size: 1.5em;
 		line-height: 1.5em;
+		font-weight: 700;
 	}
 
 	h3 {
@@ -2480,7 +2489,7 @@
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		background-color: #1f1815;
-		background-attachment: scroll,								fixed;
+		background-attachment:fixed;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
@@ -2530,6 +2539,8 @@
 			margin: 0 0 1em 0;
 			width: 6.25em;
 		}
+
+
 
 /* Footer */
 
