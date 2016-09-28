@@ -44,7 +44,18 @@
 					<section id="two">
 						
 					<h2>MOTIVATION</h2>
-					<p></p>
+					<p>In my sophomore year I took a Linear Algebra course during which I was introduced to many basic encryption techniques including matrix encryption.I did this project as the part of the course where I was required to give an application of encryption in real life.</p>
+
+					<h2>APPLICATION FLOW</h2>
+					<p>
+						The  initial phase of the application is the sign up phase. It requires every user to register by providing name, email and phone number. After the signup the user can login with their credentials for accessing chat application.The conversation between the users are encrypted and the messages are stored on database in encrypted form. We are using matrix multiplication method for message encryption.</p>
+						<img src="../images/chat_app/chat_app_flow.png" style="width:100%;" />
+					<h2>ARCHITECTURE</h2>
+						<img src="../images/chat_app/architecture.png" style="width:100%;" />
+
+					<br /><br />
+					<h2>ENCRYPTION/DECRYPTION PROCESS</h2>
+					<p>We are using matrix multiplication for message encryption. The basic concept is to convert your message into a matrix and then multiply it with another non-signular matrix. To convert the message into matrix we can use basic encoding method where A is denoted as 0, B as 1 and so on. The encryption matrix A is dynamically generated for every user by using their contact numbers. Every user will have an unique encryption matrix which will be non-singular.So if your message matrix is X and your encryption matrix is A, then the encrypted message matrix will be Y = AX. This encrypted message will be stored in the database.The original message can be retrieved as X = INVERSE(A)*Y, where INVERSE() calculates the inverse of matrix. After getting the original matrix, the message can be obtained by assigning back the characters to the numbers. </p>
 
 						<!-- Galleria-->
 						<!-- <div class="galleria">
@@ -59,7 +70,7 @@
 				<ul class="icons">
 						<!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
 						<li><a href="https://github.com/cambuzz/core" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://cambuzz.co.in" class="icon fa-internet-explorer"><span class="label">Dribbble</span></a></li>
+						<li><a href="https://cambuzz.co.in" class="icon fa-internet-explorer"><span class="label">Live Preview</span></a></li>
 						<!-- <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li> -->
 				</ul>
 				<div class="inner">
@@ -75,14 +86,14 @@
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/galleria/galleria-1.4.7.min.js"></script>
-			<script>
+			<!-- <script>
 			    $( document ).ready(function() {
 			        console.log( "ready!" );
 			        Galleria.loadTheme('../assets/js/galleria/themes/classic/galleria.classic.min.js');
 			        Galleria.run('.galleria');
 			    });
 				
-			</script>
+			</script> -->
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
 
