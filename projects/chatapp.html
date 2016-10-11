@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Fenil | Chat App</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/icons/apple-touch-icon-precomposed.png" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body class="is-landing">
+    <header id="header">
+        <!-- <h1 style="font-size:40px;">FENIL PATEL</h1> -->
+        <p style="text-align:center;"><h2>Chat App</h2></p>
+        <p style="text-align:right;font-size:20px">With end to end encryption.</p>
+    </header>
+    <div id="main">
+        <div class="items">
+            <article class="featured-item">
+                <h2>MOTIVATION</h2>
+                <p>In my sophomore year I took a Linear Algebra course during which I was introduced to many basic encryption techniques including matrix encryption.I did this project as the part of the course where I was required to give an application of encryption in real life.</p>
+
+                <h2>APPLICATION FLOW</h2>
+                <p>
+                    The  initial phase of the application is the sign up phase. It requires every user to register by providing name, email and phone number. After the signup the user can login with their credentials for accessing chat application.The conversation between the users are encrypted and the messages are stored on database in encrypted form. We are using matrix multiplication method for message encryption.</p>
+                    <img src="../images/chat_app/chat_app_flow.png" style="width:80%;" />
+                <h2>ARCHITECTURE</h2>
+                    <img src="../images/chat_app/architecture.png" style="width:80%;" />
+
+                <br /><br />
+                <h2>ENCRYPTION/DECRYPTION PROCESS</h2>
+                <p>We are using matrix multiplication for message encryption. The basic concept is to convert your message into a matrix and then multiply it with another non-signular matrix. To convert the message into matrix we can use basic encoding method where A is denoted as 0, B as 1 and so on. The encryption matrix A is dynamically generated for every user by using their contact numbers. Every user will have an unique encryption matrix which will be non-singular.So if your message matrix is X and your encryption matrix is A, then the encrypted message matrix will be Y = AX. This encrypted message will be stored in the database.The original message can be retrieved as X = INVERSE(A)*Y, where INVERSE() calculates the inverse of matrix. After getting the original matrix, the message can be obtained by assigning back the characters to the numbers. </p>
+                <p style="text-align:center;padding-top:40px;"><a style="border-bottom:0;"href="../index.html" class="icon fa-3x fa-home" style="color:gray;"></a></p>
+            </article>
+        </div>
+       
+    </div>
+    <footer id="footer">
+        <section style="text-align:center;">
+        <p>Important Links</p>
+            <ul class="links" style="display:inline;">
+                <li>
+                    <h3><a href="https://github.com/patelfenil/Chat-app-Nodejs" target="_blank">View code on github</a></h3>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="../assets/js/main.js"></script>
+</body>
+<!-- Mirrored from templated.co/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Oct 2016 12:52:54 GMT -->
+
+</html>
